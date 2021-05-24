@@ -21,11 +21,6 @@ async def start(bot, message):
                InlineKeyboardButton('Go Inline', switch_inline_query=''),
 ],
 [
-            InlineKeyboardButton(
-                "➕ Add me to a Group ➕",
-                url="http://t.me/pyjelibrarybot?startgroup=tr",
-            ),
-[
         InlineKeyboardButton('About ❤️', callback_data="about_text")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
