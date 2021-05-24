@@ -39,6 +39,11 @@ Here you can search Study Material in inline mode. Just press following buttons 
 
 ➡️ **Join @AllrounderMentor** 
 """
+ABOUT_TEXT = """<b>➥ Name</b> : <code> Deder's Library</code>
+    
+<b>➥ Creator</b> : <b><i><a href="http://t.me/PyJeDeveloper">Jack</a></i></b>
+<b>➥ Language</b> : <code>Python3</code>
+<b>➥ Library</b> : <i><a href="https://docs.pyrogram.org">Pyrogram Asyncio </a></i>"""
 
 SHARE_BUTTON_TEXT = 'Please Use {username} for Premium and exclusive Study Material\n Join @AllrounderMentor For Regular Updates ❤️'
 INVITE_MSG = environ.get('INVITE_MSG', 'Please join @AllrounderMentor to use this bot')
