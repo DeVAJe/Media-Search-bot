@@ -19,7 +19,7 @@ async def answer(bot, query):
     if AUTH_CHANNEL and not await is_subscribed(bot, query):
         await query.answer(results=[],
                            cache_time=0,
-                           switch_pm_text='You have to subscribe channel',
+                           switch_pm_text='You have to subscribe Our channel',
                            switch_pm_parameter="subscribe")
         return
 
@@ -73,8 +73,11 @@ async def answer(bot, query):
 def get_reply_markup(username, query):
     url = 't.me/share/url?url=' + quote(SHARE_BUTTON_TEXT.format(username=username))
     buttons = [[
-        InlineKeyboardButton('Search again', switch_inline_query_current_chat=query),
-        InlineKeyboardButton('Share bot', url=url),
+        InlineKeyboardButton('Search Study Material🔍', switch_inline_query_current_chat=query),
+        InlineKeyboardButton('Share 📢', url=url)
+],
+[
+        InlineKeyboardButton('Join Our Channel', url="https://t.me/Allroundermentor"),
     ]]
     return InlineKeyboardMarkup(buttons)
 
