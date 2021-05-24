@@ -31,10 +31,14 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Messages
 START_MSG = """
-**Hi, I'm Media Search bot**
+**Hello 🔥 I am Inline Study Material Bot**
 
-Here you can search files in inline mode. Just press following buttons and start searching.
+Here you can search Study Material in inline mode. Just press following buttons and start searching.
+
+**Due to Server Load, Only Channel Subscribers are allowed to use this bot.**
+
+➡️ **Join @AllrounderMentor** 
 """
 
-SHARE_BUTTON_TEXT = 'Checkout {username} for searching files'
-INVITE_MSG = environ.get('INVITE_MSG', 'Please join @.... to use this bot')
+SHARE_BUTTON_TEXT = 'Please Use {username} for Premium and exclusive Study Material\n Join @AllrounderMentor For Regular Updates ❤️'
+INVITE_MSG = environ.get('INVITE_MSG', 'Please join @AllrounderMentor to use this bot')
