@@ -2,7 +2,7 @@ import os
 import logging
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from info import START_MSG, CHANNELS, ADMINS, INVITE_MSG
+from info import START_MSG, CHANNELS, ADMINS, INVITE_MSG, ABOUT_TEXT
 from utils import Media
 
 logger = logging.getLogger(__name__)
@@ -26,6 +26,14 @@ async def start(bot, message):
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(START_MSG, reply_markup=reply_markup)
 
+
+@Client.on_message(filters.command('about'))
+async def start(bot, message):
+    """About command handler"""
+    if len(message.command) > 1 and message.command[1] == 'subscribe':
+        await message.reply(INVITE_MSG)
+    else:
+await message.reply(ABOUT_TEXT)
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
 async def channel_info(bot, message):
