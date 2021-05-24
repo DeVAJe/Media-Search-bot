@@ -2,7 +2,7 @@ import os
 import logging
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from info import START_MSG, CHANNELS, ADMINS, INVITE_MSG, ABOUT_TEXT
+from info import START_MSG, CHANNELS, ADMINS, INVITE_MSG
 from utils import Media
 
 logger = logging.getLogger(__name__)
@@ -33,7 +33,7 @@ async def start(bot, message):
     if len(message.command) > 1 and message.command[1] == 'subscribe':
         await message.reply(INVITE_MSG)
     else:
-await message.reply(ABOUT_TEXT)
+await message.reply(<b>➥ Name</b> : <code> Deder's Library</code>\n\n<b>➥ Creator</b> : <b><i><a href="http://t.me/PyJeDeveloper">Jack</a></i></b>\n<b>➥ Language</b> : <code>Python3</code>\n<b>➥ Library</b> : <i><a href="https://docs.pyrogram.org">Pyrogram Asyncio </a></i>)
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
 async def channel_info(bot, message):
