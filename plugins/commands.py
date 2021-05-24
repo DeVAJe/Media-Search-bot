@@ -19,9 +19,11 @@ async def start(bot, message):
             ],
             [
                InlineKeyboardButton('Go Inline', switch_inline_query=''),
+[
+        InlineKeyboardButton('', callback_data="")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply(START_MSG, reply_markup=reply_markup)
+        await message.reply(START_MSG, reply_markup=reply_markup
 
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
