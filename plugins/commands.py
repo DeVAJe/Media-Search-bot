@@ -21,19 +21,10 @@ async def start(bot, message):
                InlineKeyboardButton('Go Inline', switch_inline_query=''),
 ],
 [
-        InlineKeyboardButton('About ❤️', callback_data="about")
+        InlineKeyboardButton('Developer', url="https://t.me/PyJeDeveloper")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(START_MSG, reply_markup=reply_markup)
-
-
-@Client.on_message(filters.command('about'))
-async def start(bot, message):
-    """About command handler"""
-    if len(message.command) > 1 and message.command[1] == 'subscribe':
-        await message.reply(INVITE_MSG)
-    else:
-await message.reply(<b>➥ Name</b> : <code> Deder's Library</code>\n\n<b>➥ Creator</b> : <b><i><a href="http://t.me/PyJeDeveloper">Jack</a></i></b>\n<b>➥ Language</b> : <code>Python3</code>\n<b>➥ Library</b> : <i><a href="https://docs.pyrogram.org">Pyrogram Asyncio </a></i>)
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
 async def channel_info(bot, message):
