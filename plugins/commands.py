@@ -21,7 +21,7 @@ async def start(bot, message):
                InlineKeyboardButton('Go Inline', switch_inline_query=''),
 ],
 [
-        InlineKeyboardButton('About ❤️', callback_data="about_text")
+        InlineKeyboardButton('About ❤️', callback_data="about")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(START_MSG, reply_markup=reply_markup)
