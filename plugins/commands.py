@@ -26,7 +26,7 @@ async def start(bot, message):
                 url="http://t.me/pyjelibrarybot?startgroup=tr",
             ),
 [
-        InlineKeyboardButton('About ❤️', callback_data="about")
+        InlineKeyboardButton('About ❤️', callback_data="about_text")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(START_MSG, reply_markup=reply_markup)
